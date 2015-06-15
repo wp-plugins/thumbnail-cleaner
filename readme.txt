@@ -1,4 +1,4 @@
-=== Thumbnails Cleaner ===
+=== Thumbnail Cleaner ===
 Contributors: thaikolja
 Tags: thumbnails, thumbnail, clean, cleaning, regenerate, regenerating, maintenance
 Tested up to: 4.2.2
