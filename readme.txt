@@ -1,7 +1,7 @@
 === Thumbnail Cleaner ===
 Contributors: thaikolja
 Tags: thumbnails, thumbnail, clean, cleaning, regenerate, regenerating, maintenance
-Tested up to: 4.2.2
+Tested up to: 4.2.3
 Stable tag: 1.0.0
 Requires at least: 3.0.1
 License: GPLv2 or later
@@ -45,10 +45,18 @@ If you have any other ideas for features, please don't hesitate to submit them b
 
 == Changelog ==
 
+= 1.1.0 =
+* Added [Font Awesome 4.3.0](thaikolja) locally.
+* Updated translations.
+* Added compatibility for WordPress 4.2.3.
+
 = 1.0.0 =
 * This is the first release of Thumbnail Cleaner.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Compatibility and translations update.
 
 = 1.0.0 =
 This is the first release of Thumbnail Cleaner.

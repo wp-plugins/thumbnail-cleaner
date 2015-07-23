@@ -24,10 +24,12 @@
 	 */
 	function thumbnail_cleaner_get_last_backup_date($format = "") {
 		$last_backup_date = get_option("thumbnail_cleaner_last_backup_date");
+		/** Abort if no backup has been found */
 		if(!$last_backup_date) {
 			return false;
 		}
 
+		/** Accept date format */
 		if($format) {
 			$last_backup_date = strtotime($last_backup_date);
 			$last_backup_date = date($format, $last_backup_date);
@@ -66,6 +68,7 @@
 			return false;
 		}
 
+		/** Fetch all .zip files within the backup directory */
 		$files = glob($backups_directory . "/*.zip");
 		if(!count($files)) {
 			return false;
@@ -73,6 +76,7 @@
 
 		$backups = array();
 
+		/** Generate backup metadata */
 		foreach((array)$files as $file) {
 			$backups[] = array(
 				"path"      => $file,

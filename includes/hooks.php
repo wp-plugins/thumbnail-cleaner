@@ -7,6 +7,16 @@
 	 */
 
 	/**
+	 * Loads translation file.
+	 */
+	function thumbnail_cleaner_translations() {
+		$translation_path = plugin_dir_path(__FILE__) . "../languages/" . get_site_option("WPLANG") . ".mo";
+		load_textdomain("thumbnail_cleaner", $translation_path);
+	}
+
+	add_action("plugins_loaded", "thumbnail_cleaner_translations");
+
+	/**
 	 * Loads .css and .js files.
 	 *
 	 * @since 1.0.0
@@ -15,8 +25,8 @@
 		$root = plugin_dir_url(dirname(__FILE__));
 
 		/** Styles */
-		wp_enqueue_style("thumbnail-cleaner-styles-main", $root . "styles/main.css", array(), THUMBNAIL_CLEANER_VERSION);
-		wp_enqueue_style("thumbnail-cleaner-font-awesome", "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", array(), THUMBNAIL_CLEANER_VERSION);
+		wp_enqueue_style("thumbnail-cleaner-styles-main", "$root/styles/main.css", array(), THUMBNAIL_CLEANER_VERSION);
+		wp_enqueue_style("thumbnail-cleaner-font-awesome", "$root/fonts/font-awesome/css/font-awesome.min.css", array(), THUMBNAIL_CLEANER_VERSION);
 
 		/** Scripts */
 		wp_enqueue_script("thumbnail-cleaner-scripts-main", $root . "scripts/main.js");

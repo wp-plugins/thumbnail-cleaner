@@ -100,14 +100,14 @@
 					<div class="updated">
 						<p><?php echo $message; ?></p>
 					</div>
-				<?php
+					<?php
 				}
 				elseif($message) {
 					?>
 					<div class="error">
 						<p><?php echo $message; ?></p>
 					</div>
-				<?php
+					<?php
 				}
 			?>
 			<div class="intro">
@@ -151,7 +151,7 @@
 								<p class="description">
 									<?php _e("Creates a zipped archive of your <code>uploads</code> directory and saves it in <code>wp-content/backups/thumbnail-cleaner/</code> (recommended).", "thumbnail_cleaner"); ?>
 								</p>
-							<?php
+								<?php
 							}
 							else {
 								_e("The Zip PHP extension is not activated on your server. Backups are not possible unless you contact your server provider and ask them to enable this feature.", "thumbnail_cleaner");
@@ -176,7 +176,7 @@
 									<strong><?php _e("Found:", "thumbnail_cleaner"); ?></strong>
 									<?php echo sprintf(__("%s original image(s) and %s thumbnail(s).", "thumbnail_cleaner"), count($analyze_output["original"]), count($analyze_output["thumbnails"])); ?>
 								</p>
-							<?php
+								<?php
 							}
 						?>
 					</td>
@@ -263,7 +263,7 @@
 												<option value="<?php echo $backup["file_name"]; ?>">
 													<?php echo $backup["file_name"]; ?>
 												</option>
-											<?php
+												<?php
 											}
 										?>
 									</select>
@@ -271,7 +271,7 @@
 									<?php wp_nonce_field("thumbnail_cleaner_restore"); ?>
 								</form>
 								<p class="description"><?php _e("Replaces your <code>uploads</code> directory with a previously backed up version.", "thumbnail_cleaner"); ?></p>
-							<?php
+								<?php
 							}
 							else {
 								_e("No backups found.", "thumbnail_cleaner");
@@ -281,5 +281,5 @@
 				</tr>
 			</table>
 		</div>
-	<?php
+		<?php
 	}
